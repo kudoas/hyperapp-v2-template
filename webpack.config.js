@@ -23,11 +23,12 @@ module.exports = {
             loader: "babel-loader",
             options: {
               presets: [
-                "@babel/preset-env", "@babel/preset-typescript",
+                "@babel/preset-env", ["@babel/preset-typescript", { jsxPragma: "h" }],
               ],
               plugins: [
-                "@babel/plugin-transform-react-jsx"
+                ["@babel/plugin-transform-react-jsx", { pragma: "h" }]
               ],
+
             },
           }
         ],
