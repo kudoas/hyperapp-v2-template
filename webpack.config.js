@@ -5,8 +5,8 @@ module.exports = {
   mode: "development",
   entry: "./src/main.tsx",
   output: {
-    path: `${__dirname}/dist`,
-    filename: "main.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   devtool: "inline-source-map",
   devServer: {
