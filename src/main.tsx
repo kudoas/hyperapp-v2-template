@@ -8,13 +8,10 @@ type State = {
 
 const state = { todos: [], value: "" };
 
-const NewValue = (state: State, event: any) => {
-  state.value = event.target.value;
-  return {
-    ...state,
-    value: event.target.value,
-  };
-};
+const NewValue = (state: State, event: any) => ({
+  ...state,
+  value: event.target.value,
+});
 
 const AddTodo = (state: State) => ({
   ...state,
